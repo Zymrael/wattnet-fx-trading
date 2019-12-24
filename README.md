@@ -1,5 +1,6 @@
 # wattnet-fx-trading
-WATTNet: Learning to Trade FX with Hierarchical Spatio-Temporal Representations of Highly Multivariate Time Series: [paper](https://arxiv.org/abs/1909.10801), [article](https://medium.com/neuri-ai/wattnet-learning-to-trade-fx-with-hierarchical-spatio-temporal-representations-of-highly-bbd0f02c812f)
+WATTNet: Learning to Trade FX with Hierarchical Spatio-Temporal Representations of Highly Multivariate Time Series: 
+[paper](https://arxiv.org/abs/1909.10801), [article](https://medium.com/neuri-ai/wattnet-learning-to-trade-fx-with-hierarchical-spatio-temporal-representations-of-highly-bbd0f02c812f)
 
 <p align="center"> 
 <img src="fig/WATTNet.JPG" width="550" height="400">
