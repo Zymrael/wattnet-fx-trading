@@ -1,0 +1,83 @@
+"""Contains constants required for DTCC and FX spot rate download/preprocessing.
+    Column names and FX pair lists"""
+
+ALL_COLUMNS_DTCC = ['DISSEMINATION_ID', 'ORIGINAL_DISSEMINATION_ID', 'ACTION',
+                    'EXECUTION_TIMESTAMP', 'CLEARED', 'INDICATION_OF_COLLATERALIZATION',
+                    'INDICATION_OF_END_USER_EXCEPTION', 'INDICATION_OF_OTHER_PRICE_AFFECTING_TERM',
+                    'BLOCK_TRADES_AND_LARGE_NOTIONAL_OFF-FACILITY_SWAPS', 'EXECUTION_VENUE',
+                    'EFFECTIVE_DATE', 'END_DATE', 'DAY_COUNT_CONVENTION', 'SETTLEMENT_CURRENCY',
+                    'ASSET_CLASS', 'SUB-ASSET_CLASS_FOR_OTHER_COMMODITY', 'TAXONOMY',
+                    'PRICE_FORMING_CONTINUATION_DATA', 'UNDERLYING_ASSET_1', 'UNDERLYING_ASSET_2',
+                    'PRICE_NOTATION_TYPE', 'PRICE_NOTATION', 'ADDITIONAL_PRICE_NOTATION_TYPE',
+                    'ADDITIONAL_PRICE_NOTATION', 'NOTIONAL_CURRENCY_1', 'NOTIONAL_CURRENCY_2',
+                     'ROUNDED_NOTIONAL_AMOUNT_1', 'ROUNDED_NOTIONAL_AMOUNT_2', 'PAYMENT_FREQUENCY_1',
+                    'PAYMENT_FREQUENCY_2', 'RESET_FREQUENCY_1', 'RESET_FREQUENCY_2', 'PRICE_NOTATION2_TYPE',
+                    'PRICE_NOTATION2', 'PRICE_NOTATION3_TYPE', 'PRICE_NOTATION3'
+                    ]
+
+NDF_COLUMNS_DTCC = ['DISSEMINATION_ID', 'ORIGINAL_DISSEMINATION_ID', 'ACTION', 'EXECUTION_TIMESTAMP',
+                    'INDICATION_OF_OTHER_PRICE_AFFECTING_TERM',
+                    'BLOCK_TRADES_AND_LARGE_NOTIONAL_OFF-FACILITY_SWAPS',
+                    'EFFECTIVE_DATE', 'END_DATE', 'SETTLEMENT_CURRENCY',
+                    'NOTIONAL_CURRENCY_1', 'NOTIONAL_CURRENCY_2',
+                    'ROUNDED_NOTIONAL_AMOUNT_1', 'ROUNDED_NOTIONAL_AMOUNT_2'
+                   ]
+
+NDF_BOOL_COLUMNS_DTCC = ['INDICATION_OF_OTHER_PRICE_AFFECTING_TERM',
+                         'BLOCK_TRADES_AND_LARGE_NOTIONAL_OFF-FACILITY_SWAPS']
+
+NDF_CONT_COLUMNS_DTCC = ['ORIGINAL_DISSEMINATION_ID', 'ROUNDED_NOTIONAL_AMOUNT_1',
+                         'ROUNDED_NOTIONAL_AMOUNT_2']
+
+NDF_CATEGORY_COLUMNS_DTCC = ['SETTLEMENT_CURRENCY', 'NOTIONAL_CURRENCY_1', 'NOTIONAL_CURRENCY_2']
+NDF_DATE_COLUMNS_DTCC = ['EFFECTIVE_DATE', 'END_DATE']
+NDF_TIMESTAMP_COLUMNS_DTCC = ['EXECUTION_TIMESTAMP']
+NDF_CURRENCIES_DTCC = ['KRW', 'TWD', 'MYR', 'IDR', 'PHP', 'CNY', 'INR', 'USD']
+
+FEATURES_DTCC = {'all': ALL_COLUMNS_DTCC,
+                 'all_ndf': NDF_COLUMNS_DTCC,
+                 'continuous': NDF_CONT_COLUMNS_DTCC,
+                 'bool': NDF_BOOL_COLUMNS_DTCC,
+                 'timestamp': NDF_TIMESTAMP_COLUMNS_DTCC,
+                 'date': NDF_DATE_COLUMNS_DTCC,
+                 'category': NDF_CATEGORY_COLUMNS_DTCC,
+                 'currencies': NDF_CURRENCIES_DTCC
+                 }
+
+
+COLUMNS_SPOT = ['Date', 'USDKRW', 'USDTWD', 'USDMYR', 'USDIDR', 'USDPHP', 'USDCNY',
+                'USDCNH', 'USDINR']
+DATE_COLUMNS_SPOT = ['Date']
+CONT_COLUMNS_SPOT = ['USDKRW', 'USDTWD', 'USDMYR', 'USDIDR', 'USDPHP', 'USDCNY',
+                     'USDCNH', 'USDINR']
+
+FEATURES_SPOT = {'all': COLUMNS_SPOT,
+                 'continuous': CONT_COLUMNS_SPOT,
+                 'datetime': DATE_COLUMNS_SPOT
+                }
+
+ALL_COLUMNS_OANDA_SPOT = ['PAIR_CODE', 'FREQUENCY', 'OCCURRED_AT',
+                          'OPEN_BID', 'OPEN_ASK', 'HIGH_BID', 'HIGH_ASK', 'LOW_BID', 'LOW_ASK', 'CLOSE_BID',
+                          'CLOSE_ASK', 'TOTAL_TICKS']
+
+CONT_COLUMNS_OANDA_SPOT = ['OPEN_BID', 'OPEN_ASK', 'HIGH_BID', 'HIGH_ASK', 'LOW_BID',
+                           'LOW_ASK', 'CLOSE_BID', 'CLOSE_ASK', 'TOTAL_TICKS']
+
+TIMESTAMP_COLUMNS_OANDA_SPOT = ['OCCURRED_AT']
+
+CURRENCIES_OANDA_SPOT = ['EUR_USD', 'GBP_USD', 'USD_CAD', 'USD_CHF', 'USD_JPY', 'EUR_GBP', 'EUR_CHF',
+                         'AUD_USD', 'EUR_JPY', 'GBP_JPY', 'EUR_AUD', 'EUR_CZK', 'EUR_HUF', 'EUR_NZD',
+                         'EUR_SEK', 'EUR_SGD', 'EUR_CAD', 'EUR_DKK', 'EUR_NOK', 'EUR_PLN', 'EUR_TRY',
+                         'EUR_ZAR', 'USD_CNH', 'USD_DKK', 'USD_HUF', 'USD_MXN', 'USD_PLN', 'USD_SEK',
+                         'USD_THB', 'USD_ZAR', 'USD_CZK', 'USD_HKD', 'USD_INR', 'USD_NOK', 'USD_SAR',
+                         'USD_SGD', 'USD_TRY', 'GBP_AUD', 'GBP_CHF', 'GBP_ZAR', 'GBP_SGD', 'AUD_JPY',
+                         'AUD_SGD', 'CAD_JPY', 'CHF_JPY', 'NZD_CAD', 'NZD_USD', 'SGD_JPY', 'ZAR_JPY',
+                         'GBP_CAD', 'GBP_NZD', 'GBP_PLN', 'AUD_CAD', 'AUD_NZD', 'CAD_CHF', 'CAD_SGD',
+                         'CHF_ZAR', 'NZD_JPY', 'NZD_SGD', 'TRY_JPY'
+                         ]
+
+FEATURES_OANDA_SPOT = {'all': ALL_COLUMNS_OANDA_SPOT,
+                       'continuous': CONT_COLUMNS_OANDA_SPOT,
+                       'timestamp': TIMESTAMP_COLUMNS_OANDA_SPOT,
+                       'currencies': CURRENCIES_OANDA_SPOT
+                       }
