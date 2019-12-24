@@ -13,9 +13,14 @@ WATTNet: Learning to Trade FX with Hierarchical Spatio-Temporal Representations 
 ``` pip install git+https://github.com/Zymrael/wattnet-fx-trading ```
 
 ## Code availability
-Scripts to download and preprocess the data, as well as PyTorch code for training and evaluating the models will be made available at a later date for reproducibility purposes. For clarifications or inquiries about the code, contact michael [at] neuri.ai.
 
+The repo contains PyTorch code for training and evaluating the models, as well as a series of in-depth data exploration tutorial notebooks that document the project step-by-step.
+Two versions of each notebooks are provided, a `compact` version containing all the necessary code and an `extended` with additional plots, exploratory analysis and discussion.
 
+NOTE: Scripts to download and preprocess the data will be made available at a later date/
+
+## Issues
+For clarifications or inquiries about the code, contact michael [at] neuri.ai.
 For any request, feel free to open a thread under `Issues`.
 
 If you find our work interesting or useful, consider citing our work:
