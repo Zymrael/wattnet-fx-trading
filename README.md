@@ -23,7 +23,7 @@ NOTE: Scripts to download and preprocess the data will be made available at a la
 For clarifications or inquiries about the code, contact michael [at] neuri.ai
 For any request, feel free to open a thread under `Issues`.
 
-If you find our work interesting or useful, consider citing our work:
+If you find our work interesting or useful, consider citing it:
 ```
 @article{poli2019wattnet,
   title={WATTNet: Learning to Trade FX via Hierarchical Spatio-Temporal Representation of Highly Multivariate Time Series},
